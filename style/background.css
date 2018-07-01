@@ -4,7 +4,10 @@ body {
 .length-input {
    width: 50px;
 }
-.array > div {
+#input-array:empty {
+   display: none;
+}
+#input-array div {
    background-color: #9099A2;
    color: white;
    display: inline-block;
