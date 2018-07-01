@@ -1,0 +1,19 @@
+{
+  "name": "bubble-sort",
+  "version": "1.0.0",
+  "description": "JS developer's test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://m33rkat@bitbucket.org/m33rkat/bubble-sort.git"
+  },
+  "author": "Dimov Sasha",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/m33rkat/bubble-sort#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

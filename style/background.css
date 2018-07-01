@@ -1,0 +1,18 @@
+body {
+   background-color: #6D7993;
+}
+.length-input {
+   width: 50px;
+}
+.array > div {
+   background-color: #9099A2;
+   color: white;
+   display: inline-block;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   height: 20px;
+   margin: 2px;
+   padding: 4px;
+   text-align: center;
+   width: 20px;
+}
