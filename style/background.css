@@ -16,6 +16,7 @@ body {
    height: 20px;
    margin: 2px;
    padding: 4px;
+   position: relative;
    text-align: center;
    width: 25px;
 }

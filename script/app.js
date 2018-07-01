@@ -6,12 +6,13 @@ $(document).ready(function() {
       values.forEach(element => {
          $("#input-array").append('<div>' + element + '</div>');
       });
-      sortedValues = bubbleSort(values);
+      var sortedValues = values;
       if ( !$("#sorted-array").is(":empty"))
          $("#sorted-array").html('');
       sortedValues.forEach(element => {
          $("#sorted-array").append('<div>' + element + '</div>');
       });
+      sortedValues = bubbleSort(values);
    })
 });
 
@@ -33,8 +34,28 @@ function bubbleSort(items) {
                   items[i] = items[i+1];
                   items[i+1] = temp;
                   swapped = true;
+                  swapAnimation(i);
                }
          }
       } while (swapped);
    return items;
+}
+
+function swapAnimation(index) {
+   console.log(index);
+   element = $('#sorted-array').children()[index];
+   elementLeft = $(element).position();
+   console.log(elementLeft.left);
+   nextElement = $('#sorted-array').children()[index+1];
+   nextElementLeft = $(nextElement).position();
+   // $(element).css({"position": "absolute", "left": elementLeft.left});
+   // $(nextElement).css({"position": "absolute", "left": nextElementLeft.left});
+   console.log(nextElementLeft.left);
+   //$(nextElement).insertBefore(element);
+   $(element).animate({"left": '+=37px'}, 450);
+   $(nextElement).animate({"left": '-=37px'}, 450, function() {
+      $(element).css('left', '0px');
+      $(nextElement).css('left', '0px');
+      $(nextElement).insertBefore(element);
+   });
 }
