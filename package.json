@@ -4,6 +4,7 @@
   "description": "JS developer's test task",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "homepage": "https://bitbucket.org/m33rkat/bubble-sort#readme",
   "dependencies": {
     "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   }
 }
