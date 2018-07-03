@@ -15,5 +15,3 @@ export function bubbleSort(items) {
       } while (swapped);
    return {"sortedValues": items, "swapIndex": swaps};
 }
-
-//module.exports = bubbleSort;
