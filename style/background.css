@@ -20,3 +20,12 @@ body {
    text-align: center;
    width: 25px;
 }
+
+.errortext {
+   color: red;
+   visibility: hidden;
+}
+
+.visible {
+   visibility: visible;
+}

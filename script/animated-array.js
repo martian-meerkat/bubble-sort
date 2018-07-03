@@ -1,31 +1,38 @@
 /**
  * Array view class.
- * 
- * @constructor
- * @param {String} id - The id.
- * @param {Number} x  - The x coordinate.
- * @param {Number} y  - The y coordinate.
  */
 
 function AnimatedArray(values) {
    this.values = values;
-   this.html = document.createDocumentFragment();
+   this.id = "";
 }
 
-AnimatedArray.prototype.drawArray = function() {
-   var that = this;
-   this.html = document.createDocumentFragment();
+AnimatedArray.prototype.setValues = function(values) {
+   this.values = values;
+}
+
+AnimatedArray.prototype.drawArray = function(id) {
+   this.id = id;
+   html = document.createElement('div');
+   html.id = id;
    this.values.forEach(function(element) {
       var newElement = document.createElement('div');
       newElement.innerHTML = element;
-      that.html.appendChild(newElement);
+      html.appendChild(newElement);
    });
-   return this.html;
+   return html;
 }
 
 AnimatedArray.prototype.swapAnimation = function(index) {
-   var element = $('#sorted-array').children()[index];
-   var nextElement = $('#sorted-array').children()[index+1];
+   if (index < 0 || index >= this.values.length) {
+      throw new Error("The element used to swap is out of range.");
+   }
+   var array = document.getElementById(this.id);
+   var element = array.children[index];
+   var nextElement = array.children[index+1];
+   var temp = this.values[index];
+   this.values[index] = this.values[index+1];
+   this.values[index+1] = temp;
    $(element).animate({"left": '+=37px'}, 300);
    $(nextElement).animate({"left": '-=37px'}, 300, function() {
       $(element).css('left', '0px');

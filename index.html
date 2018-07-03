@@ -4,11 +4,14 @@
 <html>
    <body>
       <div>
-         <span>Длина массива:</span>
-         <input id="length-input" min="2" max="30" type="number"/>
-         <button id="sort-button">SORT</button>
+         <span>Input array size (0-30):</span>
+         <div>
+            <input id="length-input" min="2" max="30" type="number" value="10"/>
+            <button id="sort-button">SORT</button>
+         </div>
+         <span class="errortext">Array length is out of range.</span>
       </div>
-      <div id="input-array"></div>
-      <div id="sorted-array"></div>
+      <div id="input-array-container"></div>
+      <div id="sorted-array-container"></div>
    </body>
 </html>
