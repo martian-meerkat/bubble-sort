@@ -33,8 +33,8 @@ AnimatedArray.prototype.swapAnimation = function(index) {
    var temp = this.values[index];
    this.values[index] = this.values[index+1];
    this.values[index+1] = temp;
-   $(element).animate({"left": '+=37px'}, 300);
-   $(nextElement).animate({"left": '-=37px'}, 300, function() {
+   $(element).animate({"left": '+=50px'}, 350);
+   $(nextElement).animate({"left": '-=50px'}, 350, function() {
       $(element).css('left', '0px');
       $(nextElement).css('left', '0px');
       $(nextElement).insertBefore(element);

@@ -11,7 +11,7 @@ function generateArray(length) {
 $(document).ready(function() {
    var timerId;
    $("#sort-button").on('click', function() {
-      var arrlen = $("#length-input").val();
+      var arrlen = $("#size-input").val();
       if (arrlen < 2 || arrlen > 30) {
          $(".errortext").addClass("visible");
          throw new Error("Array length is out of range.");
@@ -35,7 +35,7 @@ $(document).ready(function() {
             sortedArrayHtml.swapAnimation(sorted.swapIndex[index]);
             if (index < sorted.swapIndex.length) {
                console.log(index);
-               timerId = setTimeout(swap, 610);
+               timerId = setTimeout(swap, 850);
                index++;
             }
          }, 610);

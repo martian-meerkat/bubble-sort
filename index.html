@@ -1,17 +1,19 @@
-<link rel="stylesheet" type="text/css" href="style/background.css">
+<link rel="stylesheet" type="text/css" href="style/page.css">
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="build/app.js"></script>
 <html>
    <body>
-      <div>
-         <span>Input array size (0-30):</span>
-         <div>
-            <input id="length-input" min="2" max="30" type="number" value="10"/>
-            <button id="sort-button">SORT</button>
+      <div class="main-box">
+         <div class="inputs-box">
+            <span>Input array size (2-30):</span>
+            <div>
+               <input id="size-input" min="2" max="30" type="number" value="10"/>
+               <button id="sort-button">SORT</button>
+            </div>
+            <span class="errortext">Array length is out of range.</span>
          </div>
-         <span class="errortext">Array length is out of range.</span>
+         <div id="sorted-array-container"></div>
+         <div id="input-array-container"></div>
       </div>
-      <div id="input-array-container"></div>
-      <div id="sorted-array-container"></div>
    </body>
 </html>
