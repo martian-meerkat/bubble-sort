@@ -14,26 +14,28 @@ body {
 }
 
 .inner-page-upper-row {
-   display: table-row;
    height: 40%;
    text-align: center;
 }
 
 .inner-page-upper-container {
-   display: table-cell;
    vertical-align: bottom;
 }
 
 .inner-page-lower-row {
-   display: table-row;
    height: 60%;
    text-align: center;
 }
 
 .inner-page-lower-container {
-   display: table-cell;
    vertical-align: top;
 }
+
+@cell-background-color: rgba(144, 153, 162, 0.3);
+@cell-size: 30px;
+@sort-button-size: 42px;
+@array-size-input-width: 140px;
+@array-size-input-font-size: 28px;
 
 .main-box {
    position: relative;
@@ -50,22 +52,23 @@ body {
 }
 
 #size-input {
-   background-color: rgba(144, 153, 162, 0.3);
+   background-color: @cell-background-color;
    border: 4px solid darkslategray;
    color: green;
-   font-size: 28px;
+   font-size: @array-size-input-font-size;
    font-weight: bold;
+   padding-right: 1px;
    text-align: right;
-   width: 140px;
+   width: @array-size-input-width;
 }
 
 #sort-button {
    background: url('../image/playbuttondark.png');
    border: 0;
-   height: 42px;
+   height: @sort-button-size;
    outline: none;
    vertical-align: bottom;
-   width: 42px;
+   width: @sort-button-size;
 }
 
 #sort-button:hover {
@@ -75,24 +78,23 @@ body {
 
 #input-array-container, #sorted-array-container {
    margin-top: 10px;
-   word-wrap: none;
 }
 
 #input-array div, #sorted-array div {
-   background-color: rgba(144, 153, 162, 0.3);
+   background-color: @cell-background-color;
    border: 3px solid white;
    border-radius: 50%;
    color: white;
    display: inline-block;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 28px;
-   height: 30px;
+   font-size: @cell-size - 2px;
+   height: @cell-size;
    margin: 2px;
    opacity: 0.95;
    padding: 4px;
    position: relative;
    text-align: center;
-   width: 30px;
+   width: @cell-size;
    z-index: 10;
 }
 

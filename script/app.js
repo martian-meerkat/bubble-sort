@@ -1,3 +1,5 @@
+require('../style/page.less');
+
 var sort = require('./bubble-sort');
 var animatedArray = require('./animated-array');
 
