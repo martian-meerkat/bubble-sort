@@ -11,18 +11,34 @@ body {
    position: absolute;
    height: 100%;
    width: 100%;
- }
+}
 
- .inner-page-container {
+.inner-page-upper-row {
+   display: table-row;
+   height: 40%;
+   text-align: center;
+}
+
+.inner-page-upper-container {
    display: table-cell;
-   vertical-align: middle;
- }
+   vertical-align: bottom;
+}
+
+.inner-page-lower-row {
+   display: table-row;
+   height: 60%;
+   text-align: center;
+}
+
+.inner-page-lower-container {
+   display: table-cell;
+   vertical-align: top;
+}
 
 .main-box {
    position: relative;
    margin: 0 auto;
    text-align: center;
-   transform: translateY(-35px);
 }
 
 .inputs-box {
@@ -58,8 +74,8 @@ body {
 }
 
 #input-array-container, #sorted-array-container {
-   height: 48px;
    margin-top: 10px;
+   word-wrap: none;
 }
 
 #input-array div, #sorted-array div {
@@ -98,7 +114,7 @@ body {
    z-index: 15;
 }
 
-.visible {
+.errortext.visible {
    max-height: 40px;
    visibility: visible;
 }
