@@ -2,14 +2,27 @@ body {
    background-color: aqua;
    background-image: url('../image/background.png');
    background-size: cover;
+   overflow: hidden;
 }
+
+.outer-page-container {
+   display: table;
+   overflow: hidden;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+ }
+
+ .inner-page-container {
+   display: table-cell;
+   vertical-align: middle;
+ }
 
 .main-box {
    position: relative;
    margin: 0 auto;
    text-align: center;
-   top: 50%;
-   transform: translateY(-50%);
+   transform: translateY(-35px);
 }
 
 .inputs-box {
@@ -27,6 +40,7 @@ body {
    font-size: 28px;
    font-weight: bold;
    text-align: right;
+   width: 140px;
 }
 
 #sort-button {
@@ -44,10 +58,7 @@ body {
 }
 
 #input-array-container, #sorted-array-container {
-   transition: height 1s ease;
-}
-
-#input-array, #sorted-array {
+   height: 48px;
    margin-top: 10px;
 }
 

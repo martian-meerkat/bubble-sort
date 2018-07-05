@@ -3,17 +3,21 @@
 <script type="text/javascript" src="build/app.js"></script>
 <html>
    <body>
-      <div class="main-box">
-         <div class="inputs-box">
-            <span>Input array size (2-30):</span>
-            <div>
-               <input id="size-input" min="2" max="30" type="number" value="10"/>
-               <button id="sort-button">
+      <div class="outer-container">
+         <div class="inner-container">
+            <div class="main-box">
+               <div class="inputs-box">
+                  <span>Input array size (2-30):</span>
+                  <div>
+                     <input id="size-input" min="2" max="30" type="number" value="10"/>
+                     <button id="sort-button">
+                  </div>
+               </div>
+               <div class="errortext">Array length is out of range.</div>
+               <div id="sorted-array-container"></div>
+               <div id="input-array-container"></div>
             </div>
          </div>
-         <div class="errortext">Array length is out of range.</div>
-         <div id="sorted-array-container"></div>
-         <div id="input-array-container"></div>
       </div>
    </body>
 </html>
