@@ -34,7 +34,6 @@ $(document).ready(function() {
          timerId = setTimeout(function swap() {
             sortedArrayHtml.swapAnimation(sorted.swapIndex[index]);
             if (index < sorted.swapIndex.length) {
-               console.log(index);
                timerId = setTimeout(swap, 850);
                index++;
             }
